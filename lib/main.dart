@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_demo/src/screens/home.dart';
 
-void main() => runApp(RiverpodDemo());
+void main() => runApp(ProviderScope(child: RiverpodDemo()));
 
 class RiverpodDemo extends StatelessWidget {
   const RiverpodDemo({Key? key}) : super(key: key);
@@ -14,7 +16,7 @@ class RiverpodDemo extends StatelessWidget {
         appBar: AppBar(
           title: Text('Riverpod Demo'),
         ),
-        body: Container(),
+        body: Home(),
       ),
     );
   }
